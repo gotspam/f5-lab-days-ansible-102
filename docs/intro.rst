@@ -15,7 +15,7 @@ Connect to lab
 
 **Accessing the lab environment.**
 
-#. Open a browser and go to http://training.f5agility.com.  Enter your Class# and Student# as provided by your instructor.
+#. Open a browser and go to lab link as provided by your instructor.
 
 #. Look for the xubuntu-jumpbox-vxx.  You will use the xubuntu jumpbox for all the labs. (see below)
 
