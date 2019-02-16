@@ -3,9 +3,22 @@ Simulate Blue Green Updates
 
 This demonstrates a very simple example to provide continuous updates.
 
+.. NOTE::
+
+  You need to store passwords for use in Ansible.  Use ``ansible-vault``.
+  The `ansible-vault` command has three subcommands that are frequently used.
+
+  * create
+  * edit
+
+  Type ``ansible-vault edit creds.yaml`` to modify the vault.  You will be prompted
+  for vault password before editor opens vault file.  The current password is ``password``.
+
 #. Run this playbook to offline a pool member ``10.1.20.17``.
 
-   - Type ``ansible-playbook playbooks/offline.yaml -e @creds.yaml --ask-vault-pass -e pool="hack11_pl" -e pmhost="10.1.20.17" -e pmport="80"``
+   - Type ``ansible-playbook playbooks/offline.yaml -e @creds.yaml --ask-vault-pass -e pool="hack11_pl" -e pmhost="10.1.20.17" -e pmport="80"``.
+     You will be prompted for the vault password.  The current password is ``password``.
+
 
 #. Verify if pool member 10.1.20.17 is ``forced offline``
 

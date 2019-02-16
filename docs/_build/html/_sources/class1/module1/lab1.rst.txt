@@ -27,7 +27,7 @@ host and that the current working directory in that session is **/root/ansible/1
 
 #. Run this playbook.
 
-   - Type `ansible-playbook playbooks/pool.yaml`
+   - Type ``ansible-playbook playbooks/pool.yaml``
 
    If successful, you should see similar results
 

@@ -237,10 +237,22 @@
   <div class="section" id="simulate-blue-green-updates">
 <h1>2.2.3. Simulate Blue Green Updates<a class="headerlink" href="#simulate-blue-green-updates" title="Permalink to this headline">¶</a></h1>
 <p>This demonstrates a very simple example to provide continuous updates.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>You need to store passwords for use in Ansible.  Use <code class="docutils literal"><span class="pre">ansible-vault</span></code>.
+The <cite>ansible-vault</cite> command has three subcommands that are frequently used.</p>
+<ul class="simple">
+<li>create</li>
+<li>edit</li>
+</ul>
+<p class="last">Type <code class="docutils literal"><span class="pre">ansible-vault</span> <span class="pre">edit</span> <span class="pre">creds.yaml</span></code> to modify the vault.  You will be prompted
+for vault password before editor opens vault file.  The current password is <code class="docutils literal"><span class="pre">password</span></code>.</p>
+</div>
 <ol class="arabic">
 <li><p class="first">Run this playbook to offline a pool member <code class="docutils literal"><span class="pre">10.1.20.17</span></code>.</p>
 <ul class="simple">
-<li>Type <code class="docutils literal"><span class="pre">ansible-playbook</span> <span class="pre">playbooks/offline.yaml</span> <span class="pre">-e</span> <span class="pre">&#64;creds.yaml</span> <span class="pre">--ask-vault-pass</span> <span class="pre">-e</span> <span class="pre">pool=&quot;hack11_pl&quot;</span> <span class="pre">-e</span> <span class="pre">pmhost=&quot;10.1.20.17&quot;</span> <span class="pre">-e</span> <span class="pre">pmport=&quot;80&quot;</span></code></li>
+<li>Type <code class="docutils literal"><span class="pre">ansible-playbook</span> <span class="pre">playbooks/offline.yaml</span> <span class="pre">-e</span> <span class="pre">&#64;creds.yaml</span> <span class="pre">--ask-vault-pass</span> <span class="pre">-e</span> <span class="pre">pool=&quot;hack11_pl&quot;</span> <span class="pre">-e</span> <span class="pre">pmhost=&quot;10.1.20.17&quot;</span> <span class="pre">-e</span> <span class="pre">pmport=&quot;80&quot;</span></code>.
+You will be prompted for the vault password.  The current password is <code class="docutils literal"><span class="pre">password</span></code>.</li>
 </ul>
 </li>
 <li><p class="first">Verify if pool member 10.1.20.17 is <code class="docutils literal"><span class="pre">forced</span> <span class="pre">offline</span></code></p>
